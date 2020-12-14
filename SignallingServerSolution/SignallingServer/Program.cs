@@ -20,12 +20,12 @@ namespace SignallingServer
             Host.CreateDefaultBuilder(args)
                 .ConfigureWebHostDefaults(webBuilder =>
                 {
-                    //webBuilder.UseStartup<Startup>();
-                    webBuilder
+                    webBuilder.UseStartup<Startup>();
+                    /*webBuilder
                      .UseKestrel()
                      .UseIISIntegration()
-                     .UseUrls("http://*:5000")
-                     .UseStartup<Startup>();
+                     .UseUrls("http://*:5000","http://192.168.1.36:5000")
+                     .UseStartup<Startup>();*/
                 });
     }
 }
